@@ -1,23 +1,12 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="UTF-8">
-    <title>Admin Panel</title>
-    @vite('resources/css/app.css')
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SweetBake Admin</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gray-100">
-
-    @include('components.header')
-
-    <div class="flex">
-        @include('components.sidebar')
-
-        <main class="flex-1 p-6">
-            @yield('content')
-        </main>
-    </div>
-
-    @include('components.footer')
-
+<body>
+    @yield('content')
 </body>
-</html> -->
+</html>
